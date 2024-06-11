@@ -18,7 +18,22 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: |-
+                      echo "Welcome to Harness CI"
+                      -cd server
+                      yarn install;
+                      yarn test;
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildPush
+                  identifier: BuildPush
+                  spec:
+                    connectorRef: DockerHarness
+                    repo: yeshvanth4u
+                    tags:
+                      - Latest
+                    dockerfile: server/Docerfile
+                    context: server
           platform:
             os: Linux
             arch: Amd64
