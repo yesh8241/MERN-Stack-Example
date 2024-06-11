@@ -32,7 +32,7 @@ pipeline:
                     repo: eshvanth4u/harness_01
                     tags:
                       - Latest
-                    dockerfile: server/Docerfile
+                    dockerfile: server/Dockerfile
                     context: server
           platform:
             os: Linux
