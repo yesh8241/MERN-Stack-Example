@@ -25,13 +25,13 @@ pipeline:
                       yarn test;
               - step:
                   type: BuildAndPushDockerRegistry
-                  name: BuildPush
-                  identifier: BuildPush
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: DockerHarness
-                    repo: eshvanth4u/harness_01
+                    repo: yeshvanth4u/harness_01
                     tags:
-                      - Latest
+                      - latest
                     dockerfile: server/Dockerfile
                     context: server
           platform:
