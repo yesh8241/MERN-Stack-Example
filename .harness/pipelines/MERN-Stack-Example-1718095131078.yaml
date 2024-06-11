@@ -20,7 +20,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       echo "Welcome to Harness CI"
-                      -cd server
+                      cd server
                       yarn install;
                       yarn test;
               - step:
