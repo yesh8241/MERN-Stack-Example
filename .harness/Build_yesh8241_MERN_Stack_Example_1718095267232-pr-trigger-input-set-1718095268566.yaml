@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_yesh8241_MERN_Stack_Example_1718095267232-pr-trigger-input-set
+  identifier: Build_yesh8241_MERN_Stack_Example_1718095267232prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_yesh8241_MERN_Stack_Example_1718095267232
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
